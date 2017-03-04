@@ -29,17 +29,17 @@ b {
 	font-weight: 400;
 }
 
+.content {
+	width: 1000px;
+	margin: 0 auto;
+	padding: 60px 0;
+}
+
+
 /* White sections */
 
 .white {
 	background-color: white;
-	padding: 50px 0 40px 0;
-}
-
-.white > * {
-	width: 1000px;
-	margin: 0 auto;
-	padding: 30px 0;
 }
 
 .white p {
@@ -48,7 +48,9 @@ b {
 
 .white h2 {
 	color: #666666;
+	margin-bottom: 60px;
 }
+
 
 /* Brown sections */
 
@@ -56,32 +58,32 @@ b {
 	background-color: #443333;
 	color: white;
 	margin: 0 auto;
-	padding: 70px 0 30px 0;
 }
 
 .brown p {
 	color: #cccccc;
 }
 
-.brown h2 {
-	font-weight: inherit;
-	font-size: 16px;
+.brown h1 {
+	color: #eeeeee;
+	font-size: 26px;
+	margin-top: 10px;
+	margin-bottom: 30px;
 }
 
 .brown h2 {
-	margin-top: 5px;
+	font-size: 26px;
+	margin-top: 40px;
 	margin-bottom: 0px;
 }
 
 .brown h3 {
-	color: #eeeeee;
+	font-weight: inherit;
+	font-size: 18px;
+	margin-top: 5px;
 	margin-bottom: 0px;
 }
 
-.brown > * {
-	width: 1000px;
-	margin: 0 auto;
-}
 
 /* Menu */
 
@@ -124,13 +126,14 @@ b {
 	border-bottom: 1px white dotted;
 }
 
+
 /* Events */
 
 .event-button {
 	display: block;
 	width: 180px;
 	padding: 14px 0;
-	margin: 0 auto 30px auto;
+	margin: 20px auto;
 	border: 1px solid white;
 	border-radius: 4px;
 	background-color: #0e0a0a;
@@ -149,4 +152,66 @@ b {
 .past-event-img {
 	width: 80px;
 	height: 80px;
+}
+
+
+/* Contact us */
+
+.contact-form {
+	width: 800px;
+	margin: 70px auto 0 auto;
+	font-size: 18px;
+	font-weight: 100;
+	line-height: 18px;
+}
+
+.contact-form input[type=text], .contact-form textarea {
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: 300;
+	background-color: #f8f8f8;
+	border: 1px solid #dddddd;
+	border-radius: 4px;
+}
+
+.contact-form input[type=text] {
+	width: 100%;
+	height: 40px;
+	padding: 6px 16px;
+}
+
+.contact-form textarea {
+	width: 100%;
+	height: 200px;
+	margin-top: 16px;
+	padding: 16px;
+}
+
+.contact-form ul {
+	list-style-type: none;
+	margin-top: 22px;
+}
+
+.contact-form ul li input {
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: 300;
+	padding: 18px 0;
+	margin: 0 auto;
+	border: 1px solid #dddddd;
+	border-radius: 5px;
+}
+
+.contact-form ul li input[type=submit] {
+	float: right;
+	color: white;
+	background-color: #3d3d3d;
+	width: 220px;
+}
+
+.contact-form ul li input[type=reset] {
+	float: left;
+	color: #999999;
+	background-color: white;
+	width: 200px;
 }
