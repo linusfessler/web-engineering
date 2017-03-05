@@ -375,7 +375,7 @@ background-color:#365529;
 /* Book a table */
 
 .book-a-table {
-    background-image: url(/images/book-table.jpg);
+    background-image: url(../../images/book-table.jpg);
     height:450px;
     background-position: center;
 }
@@ -460,7 +460,7 @@ background-color:#365529;
     -moz-column-count: 2; 
     column-count: 2; 
     width: 60%; 
-    margin:0 auto; 
+    margin:100px auto; 
     color: #777777;
 }
 
