@@ -1,23 +1,36 @@
+html { width: 100%; }
 body {
 	font-family: Roboto, sans-serif;
-	font-size: 18px;
+	font-size: 100%;
 	font-weight: 300;
-	line-height: 28px;
+	color: white;
+	width: 100%;
 	text-align: center;
 	padding: 0;
 	margin: 0;
+}
+
+p {
+	line-height: 160%;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 100;
 }
 
+h1 {
+	font-size: 5em;
+	line-height: 1.2em;
+}
+
 h2 {
-	font-size: 40px;
+	font-size: 2.2em;
+	margin-bottom: 1.5em;
 }
 
 h3 {
-	font-size: 26px;
+	font-size: 1.1em;
+	margin-bottom: 1.5em;
 }
 
 a {
@@ -30,61 +43,83 @@ b {
 }
 
 .content {
-	width: 1000px;
+	width: 90%;
 	margin: 0 auto;
-	padding: 60px 0;
+	padding: 4.5em 0;
 }
 
 
 /* White sections */
 
-.white {
+.whiteSection {
 	background-color: white;
 }
 
-.white p {
+.whiteSection p {
 	color: #777777;
 }
 
-.white h2 {
+.whiteSection h2 {
 	color: #666666;
-	margin-bottom: 60px;
 }
 
 
 /* Brown sections */
 
-.brown {
-	background-color: #443333;
+.brownSection {
 	color: white;
-	margin: 0 auto;
+	background-color: #443333;
 }
 
-.brown p {
+.brownSection p {
 	color: #cccccc;
 }
 
-.brown h1 {
+.brownSection h1 {
 	color: #eeeeee;
-	font-size: 26px;
-	margin-top: 10px;
-	margin-bottom: 30px;
+	font-size: 1.7em;
+	line-height: 1em;
 }
 
-.brown h2 {
-	font-size: 26px;
-	margin-top: 40px;
-	margin-bottom: 0px;
+.brownSection h2 {
+	font-size: 1.8em;
+	margin-bottom: 0.25em;
 }
 
-.brown h3 {
-	font-weight: inherit;
-	font-size: 18px;
-	margin-top: 5px;
-	margin-bottom: 0px;
+/* Image sections */
+
+.imageSection {
+	width: 100%;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 }
 
-/* Menu */
+.imageSection p {
+	text-align:center;
+	font-size:1em;
+	color:white;
+}
+
+.imageSection p, .imageSection h2 {
+	text-shadow: 2px 1px black;
+}
+
+/* Input fields shared settings */
+
+input, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: 300;
+	box-sizing: border-box;
+	padding: 0.8em 1em;
+	border: 1px solid #dddddd;
+	border-radius: 4px;
+}
+
+/* Menu section */
+
 #menuWrapper{
     background-color:#F8F8F8;
     width:100%;
@@ -134,12 +169,10 @@ margin:0 auto;
     background-repeat: no-repeat;
     background-position: center;
     height: 650px;
-    font-size: 70px;
     text-align: center;
 }
-#restourantName {
+#restaurantName {
 width:100%;
-line-height:120%;
 position:relative;
 top:35%;
 left:0px;
@@ -161,71 +194,11 @@ font-size:18px;
 line-height:50px;
 }
 
-/* First About */
-
-.sectionpart, .sectionpartPicture, .menusectionpart {
-width:70%;
-margin: 70px auto;
-}
-.sectionpart h2, .sectionpartPicture h2 {
-color: #666666;
-padding-bottom:40px;
-text-align:center;
-font-size:2em;
-}
-.sectionpartPicture h2 {
-padding-top:50px;
-font-weight:200;
-color: white;
-}
-.sectionpartPicture h2, .sectionpartPicture p {
-text-shadow: 2px 1px black;
-}
-.sectionpart p, .sectionpartPicture p {
-text-align:center;
-font-size:1em;
-color: #777777;
-}
-.sectionpartPicture p {
-color:white;
-}
-.sectionpartPicture {
- width:100% !important;
- background: url("../../images/small1.jpg") no-repeat center;
- background-attachment: fixed;
- background-size:100%;
- height: 300px;
- line-height:80px;
-}
-
-
-/* Brown Menu */
-
-.menusectionpart h2 {
-font-size:1.5em;
-margin-bottom:20px;
-color: #d2d7d4;
-}
-.menusectionpart h3 {
-font-size:0.9em;
-margin-bottom:10px;
-color: #d2d7d4;
-}
-.menusectionpart {
-background-color:#443333;
-width:100%;
-color:white;
-}
-#menusectionpartContent {
-width:70%;
-margin:0 auto;
-padding: 40px 0;
-}
-#resrourantMenu {
+#restaurantMenu {
 float:left;
 width:33%;
 }
-#resrourantMenu p{
+#restaurantMenu p{
 text-align: justify;
 font-size:0.9em;
 color: #c7cdc9;
@@ -236,7 +209,7 @@ width:66%;
 }
 .menuImages {
 float:left;
-margin:2%;
+margin-left:4%;
 width:45%;
 }
 
@@ -264,85 +237,118 @@ text-decoration: none;
 margin-top:20px;
 }
 #menuSectionNav a{
-width:200px;
-height:60px;
-border: 1px solid white;
-border-radius:10px;
-opacity:0.8; 
-display:block;
-text-align:center;
-color:white;
-text-decoration:none;
-line-height:60px;
-margin:0px auto;
+	width:200px;
+	height:60px;
+	border: 1px solid white;
+	border-radius:4px;
+	opacity:0.8; 
+	display:block;
+	text-align:center;
+	color:white;
+	text-decoration:none;
+	line-height:60px;
+	margin:0px auto;
 }
 #menuSectionNav a:first-child {
 background-color:#365529;
 }
+
 
 /* Events */
 
 .event-button {
 	display: block;
 	width: 180px;
-	padding: 14px 0;
-	margin: 20px auto;
+	padding: 20px 0;
+	margin: 0 auto;
 	border: 1px solid white;
 	border-radius: 4px;
 	background-color: #0e0a0a;
 }
 
-.upcoming-event-img, .past-event-img {
+.upcoming-events, .past-events {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-self: center;
+	flex-wrap: wrap;
+	margin-bottom: 2em;
+}
+
+.upcoming-events > div, .past-events > div {
+	padding: 1.5em 0.5em;
+}
+
+.upcoming-events p {
+	max-width: 20em;
+	margin: 0 auto;
+}
+
+.upcoming-events img, .past-events img {
 	display: inline-block;
-	border: 0.5px #999999 solid;
+	margin-bottom: 2.5em;
 }
 
-.upcoming-event-img {
-	width: 160px;
-	height: 160px;
+.upcoming-events img {
+	width: 10em;
+	height: 10em;
 }
 
-.past-event-img {
-	width: 80px;
-	height: 80px;
+.past-events img {
+	width: 5em;
+	height: 5em;
 }
 
 
 /* Contact us */
 
 .contact-form {
-	width: 800px;
-	margin: 70px auto 0 auto;
-	font-size: 18px;
+	width: 80%;
+	margin: 3em auto 0 auto;
+	font-size: 1.1em;
 	font-weight: 100;
-	line-height: 18px;
 }
 
 .contact-form input[type=text], .contact-form textarea, .book-a-table-form input[type=text], .book-a-table-form textarea {
-	font-family: inherit;
-	font-size: inherit;
-	font-weight: 300;
 	background-color: #f8f8f8;
-	border: 1px solid #dddddd;
-	border-radius: 4px;
 }
 
 .contact-form input[type=text] {
 	width: 100%;
-	height: 40px;
-	padding: 6px 16px;
+}
+
+.contact-form input[type=text]:first-child {
+	margin-right: 1em;
+	margin-top: 1em;
 }
 
 .contact-form textarea {
 	width: 100%;
-	height: 200px;
+	height: 12em;
+	margin-top: 1em;
+}
+
+.contact-form > div:first-child, .contact-form ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: stretch;
+	flex-wrap: nowrap;
+	list-style-type: none;
+}
+
+.contact-form > div:first-child input {
 	margin-top: 16px;
-	padding: 16px;
 }
 
 .contact-form ul {
-	list-style-type: none;
+	justify-content: center;
+	flex-wrap: wrap;
 	margin-top: 22px;
+}
+
+.contact-form ul li {
+	margin: 5px;
 }
 
 .contact-form ul li input {
@@ -352,34 +358,28 @@ background-color:#365529;
 	padding: 18px 0;
 	margin: 0 auto;
 	border: 1px solid #dddddd;
-	border-radius: 5px;
+	border-radius: 4px;
 }
 
 .contact-form ul li input[type=submit] {
 	float: right;
 	color: white;
 	background-color: #3d3d3d;
-	width: 220px;
+	width: 12em;
 }
 
 .contact-form ul li input[type=reset] {
 	float: left;
 	color: #999999;
 	background-color: white;
-	width: 200px;
+	width: 10em;
 }
 
 
 /* Book a table */
 
-.book-a-table {
-    background-image: url(../../images/book-table.jpg);
-    background-attachment: fixed;
-    background-position: center;
-}
-
 .book-a-table-form-container {
-    width: 500px;
+	width: 100%;
     margin: 0 auto;
 	padding: 50px 0;
     background-color: rgba(0, 0, 0, 0.5);
@@ -396,42 +396,43 @@ background-color:#365529;
 .book-a-table-form input[type=text] {
     width: 100%;
 	height: 40px;
-    padding: 0 0 0 0;
     margin: 12px 0 0 0;
-	border: 1px solid #dddddd;
-	border-radius: 5px;
 }
 
 .book-a-table-form textarea {
 	width: 100%;
 	height: 220px;
 	margin-top: 16px;
-	border: 1px solid #dddddd;
-	border-radius: 5px;
 }
 
 .book-a-table-form input[type=text], .book-a-table-form textarea {
-	font-family: inherit;
-	font-size: inherit;
-	font-weight: 300;
 	background-color: #f8f8f8;
-	border: 1px solid #dddddd;
-	border-radius: 4px;
 }
 
 #btn-book {
 	color: white;
 	background-color: #3d3d3d;
+	font-family: inherit;
+	font-size: inherit;
 	width: 120px;
     height: 60px;
     margin: 0 auto;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
 }
 
 /* Opening hours */
-.opening-hours > div > p {
-    
+
+.opening-hours {
+    -webkit-column-count: 2; 
+    -moz-column-count: 2; 
+    column-count: 2;
+	text-align: left;
+    color: #777777;
+}
+
+.opening-hours p {
+    margin-bottom: 1.5em;
 }
 
 /* Footer */
@@ -452,13 +453,12 @@ background-color:#365529;
     color: #777777;
 }
 
-.opening-hours {
-    -webkit-column-count: 2; 
-    -moz-column-count: 2; 
-    column-count: 2;
-	text-align: left;
-    width: 600px; 
-    margin: 100px auto; 
-    color: #777777;
+@media screen and (min-width: 768px) {
+	.content {
+		width: 65%;
+	}
+	
+	.book-a-table-form-container {
+		width: 50%;
+	}
 }
-
