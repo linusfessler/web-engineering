@@ -14,28 +14,21 @@
 	
 	<body>
 		<!-- Spaceholder for navbar -->
-		<div style="height: 120px"></div>
+		<div style="height: 90px"></div>
 		
 		
 		<!-- Header -->
-		<div id="menuWrapper">
-			<div id="logo">
-				<a href="index.html">
-					<img src="images/logo.png" alt="" width="100%">
-				</a>
-			</div>
-			<ul id="nav">
-				<div id="menuelements">
+		<div class="menu-wrapper">			
+			<ul class="nav">
 					<li><a href="#first">About</a></li>
-					<li class="leftMenuLink"><a href="#menu">Menu</a></li>
-					<li class="rightMenuLink"><a href="#events">Events</a></li>
+					<li><a href="#menu">Menu</a></li>
+                    <li class="logo"><img src="images/logo.png" alt=""></li>
+					<li><a href="#events">Events</a></li>
 					<li><a href="#contacts">Contacts</a></li>
-				</div>
 			</ul>
 		</div>
-
 		
-        <div id="headerWrapper">
+        <div class="header-wrapper">
             <div id="restaurantName">
                 <h1>LaPlace - Zurich </h1>
             </div>
@@ -78,16 +71,16 @@
 		
 		<!-- Menu -->
 		<div class="brownSection" id="menu">
-            <div class="content">
+            <div class="content restourant-menu-wrapper">
                 <div id="restaurantMenu">
-
+                    <div>
                     <h2 style="margin-bottom: 1em">Our Menu</h2>
                     <h3>Appetizers</h3>
                     <p>
                         We serve a seasonal tasting menu that focuses on local ingredients. Our appetizers may vary during the year to always ensure the best quality.
 						For the appetizers, we are famous for our bruschettas that we serve in several different variants.
                     </p>
-
+                    </div>
                     <div id="menuSectionNav">
                         <a class="chosen" href="">Appetizers</a>
                         <a href="">Fresh Pasta</a>
@@ -97,7 +90,6 @@
 
                 </div>
                 <div id="menuItems">
-                    <div>
                         <div class="menuImages">
                             <a href="#">
                                 <img src="images/pic01.jpg" alt="" />
@@ -151,11 +143,10 @@
                                 <a href="#">Spicy Beans</a>
                             </div>
                         </div>
-                    </div>
                 </div>
                 <div style="clear: both;"></div>
             </div>
-        </div>
+       </div>
 			
 
 		<!-- Third -->
