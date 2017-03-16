@@ -461,6 +461,9 @@ background-color:#365529;
     display: inline-block;
     color: #777777;
 }
+.opening-hours div {
+text-align:center;
+}
 
 @media screen and (min-width: 768px) {
 	.content {
@@ -471,7 +474,7 @@ background-color:#365529;
     }
     .restourant-menu-wrapper { flex-direction:row; }
 	
-	.book-a-table-form-container {
+	.book-a-table-form-container, .opening-hours {
 		width: 50%;
 	}
 	#restaurantName {
