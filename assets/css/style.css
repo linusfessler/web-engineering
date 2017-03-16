@@ -1,37 +1,66 @@
-html { width: 100%; }
 body {
 	font-family: Roboto, sans-serif;
 	font-size: 100%;
 	font-weight: 300;
 	color: white;
-	width: 100%;
 	text-align: center;
 	padding: 0;
 	margin: 0;
 }
 
-p {
-	line-height: 160%;
+nav ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	font-size: 1.25em;
+	width: 80%;
+	text-align: center;
+	margin: 0 auto; 
+	padding-top: 30px;
+}
+
+nav li {
+	font-family: Kreon;
+	flex: 1;
+}
+
+nav li a {
+	text-decoration: none;
+	color: black;
+}
+
+header {
+	font-weight: 100;
+	margin-bottom: 1.5em;
+}
+
+.small-header {
 	font-size: 1em;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	font-weight: 100;
-}
-
-h1 {
-	font-size: 4em;
-	line-height: 1.2em;
-}
-
-h2 {
+.medium-header {
 	font-size: 2.2em;
-	margin-bottom: 1.5em;
 }
 
-h3 {
-	font-size: 1.1em;
-	margin-bottom: 1.5em;
+.large-header {
+	font-size: 4em;
+}
+
+#title {
+	width: 100%;
+	position: relative;
+	top: 35%;
+	left: 0px;
+	color: white;
+	font-size: 2.5em;
+	line-height: 1.25em;
+	background-color: black;
+}
+
+article {
+	width: 90%;
+	margin: 0 auto;
+	padding: 4.5em 0;
 }
 
 a {
@@ -43,53 +72,57 @@ b {
 	font-weight: 400;
 }
 
-.content {
-	width: 90%;
-	margin: 0 auto;
-	padding: 4.5em 0;
+p {
+	font-size: 1em;
+	line-height: 1.6em;
 }
 
 
 /* White sections */
 
-.whiteSection {
+.white-section {
 	background-color: white;
 }
 
-.whiteSection p {
+.white-section p {
 	color: #777777;
 }
 
-.whiteSection h2 {
+.white-section header {
 	color: #666666;
 }
 
 
 /* Brown sections */
 
-.brownSection {
+.brown-section {
 	color: white;
 	background-color: #443333;
 }
 
-.brownSection p {
+.brown-section p {
 	color: #cccccc;
 }
 
-.brownSection h1 {
-	color: #eeeeee;
-	font-size: 1.7em;
-	line-height: 1em;
+.brown-section .small-header {
+	margin-bottom: 1.5em;
 }
 
-.brownSection h2 {
-	font-size: 1.8em;
+.brown-section .medium-header {
 	margin-bottom: 0.25em;
 }
 
+.brown-section .large-header {
+	color: #eeeeee;
+	font-size: 1.7em;
+	line-height: 1em;
+	margin-bottom: 0.25em;
+}
+
+
 /* Image sections */
 
-.imageSection {
+.image-section {
 	width: 100%;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
@@ -97,17 +130,18 @@ b {
 	background-size: cover;
 }
 
-.imageSection p {
+.image-section p {
 	text-align:center;
 	font-size:1em;
 	color:white;
 }
 
-.imageSection p, .imageSection h2 {
+.image-section p, .image-section header {
 	text-shadow: 2px 1px black;
 }
 
-/* Input fields shared settings */
+
+/* Input fields */
 
 input, textarea {
 	font-family: inherit;
@@ -119,6 +153,7 @@ input, textarea {
 	border-radius: 4px;
 }
 
+
 /* Menu section */
 
 .menu-wrapper{
@@ -128,20 +163,6 @@ input, textarea {
     position:fixed;
     top:0%;
     z-index:1000;
-}
-.nav li{
-font-family: Kreon;
-flex:1;
-}
-
-.nav {
-display: flex;
-flex-direction: row;
-justify-content: space-between; 
-width: 80%;
-text-align:center;
-margin: 0 auto; 
-padding-top: 30px;
 }
 
 .logo {
@@ -153,16 +174,7 @@ width:100%;
 height:100%;
 }
 
-.nav a{
- text-decoration: none;
- color: black;
- font-size: 4vw;
-}
-.nav {
-margin:0 auto;
-}
-
-.header-wrapper {
+.title-wrapper {
 	position:relative;
     background: url("../../images/header.jpg") no-repeat center; 
     background-size: cover;
@@ -170,15 +182,6 @@ margin:0 auto;
     background-position: center;
     height: 650px;
     text-align: center;
-}
-#restaurantName {
-width:100%;
-position:relative;
-top:35%;
-left:0px;
-color:white;
-font-size: 0.6em;
-background-color:black;
 }
 #bookATable {
 position: absolute;
@@ -210,7 +213,7 @@ flex-direction: row;
 justify-content: space-between; 
 flex-wrap: wrap; 
 }
-.restourant-menu-wrapper {    
+.restaurant-menu-wrapper {    
 display: flex;
 flex-direction: column;
 justify-content: space-between; 
@@ -288,8 +291,11 @@ background-color:#365529;
 	padding: 1.5em 0.5em;
 }
 
+.upcoming-events > div {
+	width: 20em;
+}
+
 .upcoming-events p {
-	max-width: 20em;
 	margin: 0 auto;
 }
 
@@ -301,6 +307,10 @@ background-color:#365529;
 .upcoming-events img {
 	width: 10em;
 	height: 10em;
+}
+
+.past-events > div {
+	width: 16em;
 }
 
 .past-events img {
@@ -446,18 +456,18 @@ background-color:#365529;
 
 /* Footer */
 
-.footer {
+footer {
     margin: 50px auto 200px;
 }
 
-.footer ul {
+footer ul {
     list-style-type: none;
     overflow: hidden;    
     font-family: inherit;
     font-size: 15px
 }
 
-.footer ul li {
+footer ul li {
     display: inline-block;
     color: #777777;
 }
@@ -466,18 +476,21 @@ text-align:center;
 }
 
 @media screen and (min-width: 768px) {
-	.content {
+	article {
 		width: 65%;
 	}
-    .nav a {
-    font-size: 2vw;
-    }
-    .restourant-menu-wrapper { flex-direction:row; }
+	nav ul {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		font-size: 2em;
+	}
+	#title {
+		font-size: 5em;
+	}
+    .restaurant-menu-wrapper { flex-direction:row; }
 	
 	.book-a-table-form-container, .opening-hours {
 		width: 50%;
-	}
-	#restaurantName {
-		font-size: 1em;
 	}
 }
