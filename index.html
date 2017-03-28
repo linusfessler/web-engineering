@@ -37,7 +37,7 @@
             var firstOhe = true;
 
             $(document).ready(function () {
-                $("#picMenu").append(project.getMenu("appetizer"));
+                $("#picMenu").append(project.getMenu("#appetizers-menu"));
                 hideElement('#title');
                 hideElement('#first article');
                 hideElement(otbiE);
@@ -52,6 +52,31 @@
 
                 $("#title").animate({ left: '0px' }, "slow");
                 $("#first article").animate({ left: '0px' }, "slow");
+
+                $("#appetizers-menu").hover(function () {
+                    $("#picMenu").html("");
+                    $("#picMenu").append(project.getMenu("#appetizers-menu"));
+                    $(".chosen").removeClass("chosen");
+                    $("#appetizers-menu").addClass("chosen");
+                })
+                $("#fresh-pasta-menu").hover(function () {
+                    $("#picMenu").html("");
+                    $("#picMenu").append(project.getMenu("#fresh-pasta-menu"));
+                    $(".chosen").removeClass("chosen");
+                    $("#fresh-pasta-menu").addClass("chosen");
+                })
+                $("#meat-fish-menu").hover(function () {
+                    $("#picMenu").html("");
+                    $("#picMenu").append(project.getMenu("#meat-fish-menu"));
+                    $(".chosen").removeClass("chosen");
+                    $("#meat-fish-menu").addClass("chosen");
+                })
+                $("#dessert-menu").hover(function () {
+                    $("#picMenu").html("");
+                    $("#picMenu").append(project.getMenu("#dessert-menu"));
+                    $(".chosen").removeClass("chosen");
+                    $("#dessert-menu").addClass("chosen");
+                })
             });
 
             $(window).scroll (function () {
