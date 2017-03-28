@@ -10,6 +10,7 @@
     <link href="assets/css/reset.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="script.js" type="text/javascript"></script>
     <script>
 
             var hqcE = "#highQualityCuisine article";
@@ -36,6 +37,7 @@
             var firstOhe = true;
 
             $(document).ready(function () {
+                $("#picMenu").append(project.getMenu("appetizer"));
                 hideElement('#title');
                 hideElement('#first article');
                 hideElement(otbiE);
@@ -132,6 +134,8 @@
             function setChosenMenu(element) {
                 $(".chosen").removeClass("chosen");
                 $(element).addClass("chosen");
+                $("#picMenu").html("");
+                $("#picMenu").append(project.getMenu(element));
             }
 
                 function animateElement(e, first)
@@ -229,115 +233,8 @@
                     <a href="" id="dessert-menu">Dessert</a>
                 </div>
             </div>
-            <div>
-                <div class="menu-item">
-                    <a href="#">
-                        <img src="images/pic01.jpg" alt="" />
-                    </a>
-                    <div>
-                        <div>
-                            <a href="#bruschette-with-tomatos">Bruschette with Tomatoes</a>
-                        </div>
-                    </div>
-                </div>
-                <div id="bruschette-with-tomatos" class="modalDialog">
-                    <div>
-                        <a href="#close" title="Close" class="close">X</a>
-                        <h2>Bruschette with Tomatoes</h2>
-                        <img src="images/pic01.jpg" alt="" />
-                        <p>Bruschetta is an antipasto (starter dish) from Italy consisting of grilled bread rubbed with garlic and topped with olive oil and salt. Variations may include toppings of tomato, vegetables, beans, cured meat, or cheese.</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <a href="#">
-                        <img src="images/pic02.jpg" alt="" />
-                    </a>
-                    <div>
-                        <div>
-                            <a href="#green-rolls">Green Rolls </a>
-                        </div>
-                    </div>
-                </div>
-                <div id="green-rolls" class="modalDialog">
-                    <div>
-                        <a href="#close" title="Close" class="close">X</a>
-                        <h2>Green Rolls</h2>
-                        <img src="images/pic02.jpg" alt="" />
-                        <p> A healthy twist on a vegan taco, with collard green leaves standing in for taco shells, filled with chipotle sweet potatoes, fresh corn and beans.</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <a href="#">
-                        <img src="images/pic03.jpg" alt="" />
-                    </a>
-                    <div>
-                        <div>
-                            <a href="#eggplants">Eggplants  </a>
-                        </div>
-                    </div>
-                </div>
-                <div id="eggplants" class="modalDialog">
-                    <div>
-                        <a href="#close" title="Close" class="close">X</a>
-                        <h2>Eggplants</h2>
-                        <img src="images/pic03.jpg" alt="" />
-                        <p>Karniyarik is a Turkish dish consisting of eggplant stuffed with a mix of sautéed chopped onions, garlic, black pepper, tomatoes, parsley and ground meat.</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <a href="#">
-                        <img src="images/pic04.jpg" alt="" />
-                    </a>
-                    <div>
-                        <div>
-                            <a href="#bruschette">Bruschette</a>
-                        </div>
-                    </div>
-                </div>
-                <div id="bruschette" class="modalDialog">
-                    <div>
-                        <a href="#close" title="Close" class="close">X</a>
-                        <h2>Bruschette</h2>
-                        <img src="images/pic04.jpg" alt="" />
-                        <p>Bruschetta is an antipasto (starter dish) from Italy consisting of grilled bread rubbed with garlic and topped with olive oil and salt. Variations may include toppings of tomato, vegetables, beans, cured meat, or cheese.</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <a href="#">
-                        <img src="images/pic05.jpg" alt="" />
-                    </a>
-                    <div>
-                        <div>
-                            <a href="#meatballs">Meatballs</a>
-                        </div>
-                    </div>
-                </div>
-                <div id="meatballs" class="modalDialog">
-                    <div>
-                        <a href="#close" title="Close" class="close">X</a>
-                        <h2>Meatballs</h2>
-                        <img src="images/pic05.jpg" alt="" />
-                        <p>A meatball is ground or minced meat rolled into a small ball, sometimes along with other ingredients, such as bread crumbs, minced onion, eggs, butter, and seasoning. Meatballs are cooked by frying, baking, steaming, or braising in sauce.</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <a href="#">
-                        <img src="images/pic06.jpg" alt="" />
-                    </a>
-                    <div>
-                        <div>
-                            <a href="#spicy-beans">Spicy Beans</a>
-                        </div>
-                    </div>
-                </div>
-                <div id="spicy-beans" class="modalDialog">
-                    <div>
-                        <a href="#close" title="Close" class="close">X</a>
-                        <h2>Spicy Beans</h2>
-                        <img src="images/pic06.jpg" alt="" />
-                        <p>A bit of heat from red chili flakes and plenty of garlic flavor come through with these crunchy, dill-scented green beans. Spicy Beans and Wilted Greens stew: The Parmesan rind adds richness; the dried beans deliver creaminess.</p>
-                    </div>
-                </div>
+            <div id="picMenu">
+                
             </div>
             
             <div style="clear: both;"></div>
