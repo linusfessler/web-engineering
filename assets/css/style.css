@@ -356,7 +356,7 @@ input, textarea {
 	margin: 0px auto;
 }
 
-#menuSectionNav a:first-child {
+.chosen {
 	background-color: #365529;
 }
 

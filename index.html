@@ -15,11 +15,16 @@
             var hqcE = "#highQualityCuisine article";
             var otbiE = "#onlyTheBestIngredients article";
             var oeE = "#events article";
-            var ueE = ".upcoming-events";
-            var peE = "past-events";
-            var cfE = ".contact-form";
-            var batE = ".book-a-table-form-container";
-            var ohE = ".opening-hours";
+            var ueE = ".upcoming-events div";
+            var peE = ".past-events div";
+            var batE = "#bookATableSection article";
+            var ohE = "#openingHoursSection article";
+            var cfE = "#contacts .contact-form";
+
+            var am = "#appetizers-menu"
+            var fpm = "#fresh-pasta-menu"
+            var mfm = "#meat-fish-menu"
+            var dm = "#dessert-menu"
 
             var firstHqc = true;
             var firstOtbi = true;
@@ -33,7 +38,6 @@
             $(document).ready(function () {
                 hideElement('#title');
                 hideElement('#first article');
-
                 hideElement(otbiE);
                 hideElement(hqcE);
                 hideElement(oeE);
@@ -42,20 +46,25 @@
                 hideElement(cfE);
                 hideElement(batE);
                 hideElement(ohE);
+                $("#FreshPasta").hide();
 
-                $("#title").animate({ left: '0px' });
-                $("#first article").animate({ left: '0px' });
+                $("#title").animate({ left: '0px' }, "slow");
+                $("#first article").animate({ left: '0px' }, "slow");
             });
 
             $(window).scroll (function () {
-                var animateHqce = runAnimation("#highQualityCuisine", hqcE);
-                var animateOtbie = runAnimation("#onlyTheBestIngredients", otbiE);
-                var animateOee = runAnimation("#events", oeE);
-                var animateUee = runAnimation(".brown-section", ueE); // not working
-                var animatePee = runAnimation("#pastEvents", peE); // not working
-                var animateBate = runAnimation("#bookATableSection", batE);
-                var animateOhe = runAnimation("#openingHoursSection", ohE);
-                var animateContacts = runAnimation("#contacts", cfE);
+                var animateHqce = runAnimation(hqcE);
+                var animateOtbie = runAnimation(otbiE);
+                var animateOee = runAnimation(oeE);
+                var animateUee = runAnimation(ueE);
+                var animatePee = runAnimation(peE);
+                var animateBate = runAnimation(batE);
+                var animateOhe = runAnimation(ohE);
+                var animateContacts = runAnimation(cfE);
+                var animateApetizers = animateMenuOptions(am);
+                var animateFreshPasta = animateMenuOptions(fpm);
+                var animateMeatFish = animateMenuOptions(mfm);
+                var animateDessert = animateMenuOptions(dm);
 
                  // High quality cuisine
                 if (animateHqce == true) {
@@ -89,31 +98,56 @@
                 if (animateOhe == true) {
                     animateElement(ohE, firstOhe)
                 }
+                if (animateApetizers == true) {
+                    setChosenMenu(am);
+                }
+                if (animateFreshPasta == true) {
+                    setChosenMenu(fpm);
+                }
+                if (animateMeatFish == true) {
+                    setChosenMenu(mfm);
+                }
+                if (animateDessert == true) {
+                    setChosenMenu(dm);
+                }
             });
 
             function runAnimation(section, e) {
                 var y = $(document).scrollTop();
                 var s = $(section);
-
-                 if (y > s.position().top - 700) {
+                if (y > s.position().top - (window.innerHeight - 50)) {
                     return true;
                 }
             }
 
-            function animateElement(e, first)
-            {
-                if (first == true){
-                    $(e).animate({ left: '0px' });
-                    first = false;
+            function animateMenuOptions(section, e) {
+                var y = $(document).scrollTop();
+                var s = $(section);
+                console.log(window.innerHeight);
+                if (y > s.position().top - (window.innerHeight /2)) {
+                    return true;
                 }
             }
 
-            function hideElement(e) {
-                $(e).css({
-                    position: 'relative',
-                    left: '-2000px'
-                });
+            function setChosenMenu(element) {
+                $(".chosen").removeClass("chosen");
+                $(element).addClass("chosen");
             }
+
+                function animateElement(e, first)
+                {
+                    if (first == true){
+                        $(e).animate({ left: '0px' }, "slow");
+                        first = false;
+                    }
+                }
+
+                function hideElement(e) {
+                    $(e).css({
+                        position: 'relative',
+                        left: '-2000px'
+                    });
+                }
 
     </script>
 </head>
@@ -189,10 +223,10 @@
                     </p>
                 </div>
                 <div id="menuSectionNav">
-                    <a class="chosen" href="">Appetizers</a>
-                    <a href="">Fresh Pasta</a>
-                    <a href="">Meat - Fish</a>
-                    <a href="">Dessert</a>
+                    <a class="chosen" id="appetizers-menu" href="">Appetizers</a>
+                    <a href="" id="fresh-pasta-menu">Fresh Pasta</a>
+                    <a href="" id="meat-fish-menu">Meat - Fish</a>
+                    <a href="" id="dessert-menu">Dessert</a>
                 </div>
             </div>
             <div>
@@ -305,6 +339,7 @@
                     </div>
                 </div>
             </div>
+            
             <div style="clear: both;"></div>
         </article>
     </section>
