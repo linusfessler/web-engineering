@@ -1,0 +1,602 @@
+body {
+	font-family: Roboto, sans-serif;
+	font-size: 100%;
+	font-weight: 300;
+	color: white;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+
+.menu-wrapper nav ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	font-size: 1.25em;
+	width: 80%;
+	text-align: center;
+	margin: 0 auto;
+	padding-left: 0;
+	padding-top: 30px;
+	list-style-type: none;
+}
+
+.menu-wrapper nav li {
+	font-family: Kreon;
+	flex: 1;
+}
+
+.menu-wrapper nav li a {
+	text-decoration: none;
+	color: black;
+}
+
+header {
+	font-weight: 100;
+	margin-bottom: 1.5em;
+}
+
+.small-header {
+	font-size: 1em;
+}
+
+.medium-header {
+	font-size: 2.2em;
+}
+
+.large-header {
+	font-size: 4em;
+}
+
+#title {
+	width: 100%;
+	position: relative;
+	top: 35%;
+	left: 0px;
+	color: white;
+	font-size: 2.5em;
+	line-height: 1.25em;
+	background-color: black;
+}
+
+article {
+	width: 90%;
+	margin: 0 auto;
+	padding: 4.5em 0;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+b {
+	font-weight: 400;
+}
+
+p {
+	font-size: 1em;
+	line-height: 1.6em;
+}
+
+
+/* White sections */
+
+.white-section {
+	background-color: white;
+}
+
+.white-section p {
+	color: #777777;
+}
+
+.white-section header {
+	color: #666666;
+}
+
+
+/* Brown sections */
+
+.brown-section {
+	color: white;
+	background-color: #443333;
+}
+
+.brown-section p {
+	color: #cccccc;
+}
+
+.brown-section .small-header {
+	margin-bottom: 1.5em;
+}
+
+.brown-section .medium-header {
+	margin-bottom: 0.25em;
+}
+
+.brown-section .large-header {
+	color: #eeeeee;
+	font-size: 1.7em;
+	line-height: 1em;
+	margin-bottom: 0.25em;
+}
+
+
+/* Image sections */
+
+.image-section {
+	width: 100%;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.image-section p {
+	text-align:center;
+	font-size:1em;
+	color:white;
+}
+
+.image-section p, .image-section header {
+	text-shadow: 2px 1px black;
+}
+
+
+/* Input fields */
+
+input, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: 300;
+	box-sizing: border-box;
+	padding: 0.8em 0.5em;
+	border: 1px solid #dddddd;
+	border-radius: 4px;
+}
+
+.menu-wrapper{
+    background-color: #F8F8F8;
+    width: 100%;
+    max-height: 100px;
+    position: fixed;
+    top: 0%;
+    z-index: 1000;
+}
+
+.logo {
+    max-width: 130px;
+}
+
+.logo img {
+	width: 100%;
+	height: 100%;
+}
+
+.title-wrapper {
+	position:relative;
+    background: url("images/header.jpg") no-repeat center; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 650px;
+    text-align: center;
+}
+#bookATable {
+	position: absolute;
+	top: 55%;
+	transform: translate(-50%, 0);
+	width: 200px;
+	height: 50px;
+	border: 2px solid white;
+	border-radius: 5px;
+	background-color: black;
+	opacity: 0.8;
+	color: white;
+	font-size: 18px;
+	line-height: 50px;
+}
+
+
+/* Our Menu */
+
+.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;  
+}
+
+.modalDialog > div {
+	width: 400px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #fff;
+}
+
+.modalDialog p, .modalDialog h2 {    
+    color: #7a828e;
+    text-align:left;
+    margin:15px 0;
+}
+.modalDialog img {
+    margin: 10px 0;
+}
+.close {
+	color: #000;
+	line-height: 25px;
+	position: absolute;
+	right: 15px;
+	text-align: center;
+	top: 20px;
+	width: 14px;
+    border-bottom:1px dotted black;
+	font-weight: bold;
+}
+
+.close:hover { color: red; }
+
+.restaurant-menu {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.restaurant-menu > div:nth-child(1) p {
+	margin: 0 auto;
+	text-align: justify;
+}
+
+.restaurant-menu > div:nth-child(2) {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.menu-item {
+	position: relative;
+	width: 15em;
+	height: 10em;
+	margin: 1em;
+	border-radius: 0.5em;
+	overflow: hidden;
+}
+
+.menu-item img {
+	width: 100%;
+	height: auto;
+}
+
+/* Black background */
+
+.menu-item > div {
+	position: absolute;
+	box-sizing: border-box;
+	text-align: left;
+	top: 60%;
+	width: 100%;
+	height: 2.5em;
+	line-height: 2.5em;
+	background-color: black;
+	transition: all 0.5s ease-in;
+}
+
+/* Black background changing to gradient on hover */
+
+.menu-item:hover > div {
+	background: linear-gradient(#ff6464, rgba(0,0,0,0));
+	height: 100%;
+	top: 0;
+	border-radius: 0.5em;
+	transition: all 0.5s ease-out;
+}
+
+/* Text */
+
+.menu-item > div > div {
+	position: absolute;
+	top: 0;
+	left: 4%;
+	white-space: nowrap;
+	transition: all 1s ease-in;
+}
+
+/* Center text on hover */
+
+.menu-item:hover > div > div {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotateY(360deg);
+	transition: all 1s ease-out;
+}
+
+.menu-item div a {
+	color: white;
+	border-bottom: 1px dotted #fff;
+	text-decoration: none;
+}
+
+.menu-item > a {
+	width: 100%;
+	height: 100%;
+}
+
+#menuSectionNav {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#menuSectionNav a{
+	width: 200px;
+	height: 60px;
+	border: 1px solid white;
+	border-radius: 4px;
+	opacity: 0.8; 
+	display: block;
+	text-align: center;
+	color: white;
+	text-decoration: none;
+	line-height: 60px;
+	margin: 0px auto;
+}
+
+.chosen {
+	background-color: #365529;
+}
+
+
+/* Events */
+
+.event-button {
+	display: block;
+	width: 180px;
+	padding: 20px 0;
+	margin: 0 auto;
+	border: 1px solid white;
+	border-radius: 4px;
+	background-color: #0e0a0a;
+}
+
+.upcoming-events, .past-events {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-self: center;
+	flex-wrap: wrap;
+	margin-bottom: 2em;
+}
+
+.upcoming-events > div, .past-events > div {
+	padding: 1.5em 0.5em;
+}
+
+.upcoming-events > div {
+	width: 20em;
+}
+
+.upcoming-events p {
+	margin: 0 auto;
+}
+
+.upcoming-events img, .past-events img {
+	display: inline-block;
+	margin-bottom: 2.5em;
+}
+
+.upcoming-events img {
+	width: 10em;
+	height: 10em;
+}
+
+.past-events > div {
+	width: 16em;
+}
+
+.past-events img {
+	width: 5em;
+	height: 5em;
+}
+
+
+/* Contact us */
+
+.contact-form {
+	width: 80%;
+	margin: 3em auto 0 auto;
+	font-size: 1.1em;
+	font-weight: 100;
+}
+
+.contact-form input[type=text], .contact-form textarea, .book-a-table-form input[type=text], .book-a-table-form textarea {
+	background-color: #f8f8f8;
+}
+
+.contact-form input[type=text] {
+	width: 100%;
+}
+
+.contact-form input[type=text]:first-child {
+	margin-right: 1em;
+	margin-top: 1em;
+}
+
+.contact-form textarea {
+	width: 100%;
+	height: 12em;
+	margin-top: 1em;
+}
+
+.contact-form > div:first-child, .contact-form ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: stretch;
+	flex-wrap: nowrap;
+	list-style-type: none;
+}
+
+.contact-form > div:first-child input {
+	margin-top: 16px;
+}
+
+.contact-form ul {
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 22px;
+}
+
+.contact-form ul li {
+	margin: 5px;
+}
+
+.contact-form ul li input {
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: 300;
+	padding: 18px 0;
+	margin: 0 auto;
+	border: 1px solid #dddddd;
+	border-radius: 4px;
+}
+
+.contact-form ul li input[type=submit] {
+	float: right;
+	color: white;
+	background-color: #3d3d3d;
+	width: 12em;
+}
+
+.contact-form ul li input[type=reset] {
+	float: left;
+	color: #999999;
+	background-color: white;
+	width: 10em;
+}
+
+
+/* Book a table */
+
+.book-a-table-form-container {
+	width: 100%;
+    margin: 0 auto;
+	padding: 50px 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.book-a-table-form {
+	width: 90%;
+	margin: 0 auto;
+	font-size: 18px;
+	font-weight: 100;
+	line-height: 18px;
+}
+
+.book-a-table-form input[type=text] {
+    width: 100%;
+	height: 40px;
+    margin: 12px 0 0 0;
+}
+
+.book-a-table-form textarea {
+	width: 100%;
+	height: 220px;
+	margin-top: 16px;
+}
+
+.book-a-table-form input[type=text], .book-a-table-form textarea {
+	background-color: #f8f8f8;
+}
+
+#btn-book {
+	color: white;
+	background-color: #3d3d3d;
+	font-family: inherit;
+	font-size: inherit;
+	width: 120px;
+    height: 60px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 4px;
+}
+
+/* Opening hours */
+
+.opening-hours {
+    -webkit-column-count: 2; 
+    -moz-column-count: 2; 
+    column-count: 2;
+	text-align: left;
+    color: #777777;
+}
+
+.opening-hours p {
+    margin-bottom: 1.5em;
+}
+
+/* Footer */
+
+footer {
+    margin: 50px auto 200px;
+}
+
+footer ul {
+    list-style-type: none;
+    overflow: hidden;    
+    font-family: inherit;
+    font-size: 15px
+}
+
+footer ul li {
+    display: inline-block;
+    color: #777777;
+}
+.opening-hours div {
+text-align:center;
+}
+
+@media screen and (min-width: 768px) {
+	article {
+		width: 65%;
+	}
+
+	.restaurant-menu {
+		flex-wrap: nowrap;
+	}
+
+	.restaurant-menu > div:nth-child(2) {
+		justify-content: flex-end;
+	}
+	
+	nav ul {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		font-size: 2em;
+	}
+	
+	#title {
+		font-size: 5em;
+	}
+	
+	.book-a-table-form-container, .opening-hours {
+		width: 50%;
+	}
+}
