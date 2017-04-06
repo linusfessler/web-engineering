@@ -7,4 +7,4 @@ foreach ($pages as $page) :
 endforeach
 ?>
 
-<?php get_footer(); ?>
+<?php get_footer(); ?>  
