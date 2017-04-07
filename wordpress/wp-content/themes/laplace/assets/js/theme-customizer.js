@@ -50,10 +50,29 @@
             $('#holidays_hours_span').html(newval);
         });
     });
-    wp.customize('blogname', function (value) {
+
+    wp.customize('contact_city', function (value) {
         value.bind(function (newval) {
-            console.log("blogname!");
-            $('#holidays_hours_span').html(newval);
+            console.log("hello");
+            $('#city_span').html(newval);
+        });
+    });
+
+    wp.customize('contact_address', function (value) {
+        value.bind(function (newval) {
+            $('#address_span').html(newval);
+        });
+    });
+
+    wp.customize('contact_phone', function (value) {
+        value.bind(function (newval) {
+            $('#phone_span').html(newval);
+        });
+    });
+
+    wp.customize('contact_email', function (value) {
+        value.bind(function (newval) {
+            $('#email_span').html(newval);
         });
     });
 

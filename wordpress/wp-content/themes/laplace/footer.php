@@ -9,10 +9,10 @@
             </div>
             <div>
                 <header class="medium-header">  Contacts </header>
-                <p> <b>ADDRESS : </b>4578 Zurich</p> </br>
-                <p> Badenerstrasse 500</p> </br>
-                <p> <b>PHONE : </b>(606) 144-0100 </p> </br>
-                <p> <b>EMAIL : </b>admin@laplace.com</p> </br>
+                <p> <b>ADDRESS : </b><span id="city_span"><?php echo get_theme_mod('contact_city'); ?></span></p> </br>
+                <p> <span id="address_span"><?php echo get_theme_mod('contact_address'); ?></span></p> </br>
+                <p> <b>PHONE : </b><span id="phone_span"><?php echo get_theme_mod('contact_phone'); ?></span></p> </br>
+                <p> <b>EMAIL : </b><span id="email_span"><?php echo get_theme_mod('contact_email'); ?></span></p> </br>
             </div>
         </article>
     </section>

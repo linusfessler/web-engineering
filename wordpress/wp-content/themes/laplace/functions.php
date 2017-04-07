@@ -46,6 +46,46 @@ function register_open_hours_customizer($wp_customize){
 
 add_action('customize_register', 'register_open_hours_customizer');
 
+// Add customization for opening hours
+function register_contact_customizer($wp_customize){
+
+	// Create New Customization section
+	$wp_customize->add_section( 'contact_details' , array('title' =>  'Contacts', 'description' => 'Modify Contact Details', ));
+
+	$wp_customize->add_setting( 'contact_city',  array('default' =>  '4578 Zurich', 'transport'=> 'postMessage' ));
+
+	$wp_customize->add_setting( 'contact_address',  array('default' =>  'Badenerstrasse 500', 'transport'=> 'postMessage', ));
+
+	$wp_customize->add_setting( 'contact_phone',  array('default' =>  '(606) 144-0100', 'transport'	=> 'postMessage',));
+
+	$wp_customize->add_setting( 'contact_email',  array('default' =>  'admin@laplace.com', 'transport'=> 'postMessage',));
+
+	$wp_customize->add_control( new WP_Customize_Control ($wp_customize, 'contact_city' , array(
+		'label' =>  __( 'City', 'WebEng' ) ,
+		'section' => 'contact_details' ,
+		'settings' => 'contact_city' 
+		)));
+
+	$wp_customize->add_control( new WP_Customize_Control ($wp_customize, 'contact_address' , array(
+		'label' =>  __( 'Address', 'WebEng' ) ,
+		'section' => 'contact_details' ,
+		'settings' => 'contact_address' 
+		)));
+
+	$wp_customize->add_control( new WP_Customize_Control ($wp_customize, 'contact_phone' , array(
+		'label' =>  __( 'Phone', 'WebEng' ) ,
+		'section' => 'contact_details' ,
+		'settings' => 'contact_phone' 
+		)));
+
+	$wp_customize->add_control( new WP_Customize_Control ($wp_customize, 'contact_email' , array(
+		'label' =>  __( 'Email', 'WebEng' ) ,
+		'section' => 'contact_details' ,
+		'settings' => 'contact_email' 
+		)));
+}
+
+add_action('customize_register', 'register_contact_customizer');
 
 function register_basic_settings($wp_customize){
 
