@@ -34,7 +34,6 @@ $(document).ready(function () {
 	hideElement(batE);
 	hideElement(ohE);
 	$("#FreshPasta").hide();
-
 	$("#title").animate({ left: '0px' }, "slow");
 	$("#first article").animate({ left: '0px' }, "slow");
 

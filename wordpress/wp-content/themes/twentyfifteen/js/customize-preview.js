@@ -11,6 +11,14 @@
 		                    .find( '#twentyfifteen-color-scheme-css' );
 	}
 
+    //Update site background color...
+
+	api('background_color_set', function (value) {
+	    value.bind(function (to) {
+	        $('.brown-section').css('background-color', newval);
+	    });
+	});
+
 	// Site title.
 	api( 'blogname', function( value ) {
 		value.bind( function( to ) {
