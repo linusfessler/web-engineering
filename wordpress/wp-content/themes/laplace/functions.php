@@ -54,7 +54,7 @@ function register_basic_settings($wp_customize){
 
 	$wp_customize->add_setting( 'background_color',  array('default' =>  '#443333', 'transport'=> 'postMessage'));
 	$wp_customize->add_setting( 'website_title',  array('default' =>  'Zurich - LaPlace', 'transport'=> 'postMessage'));
-	$wp_customize->add_setting('header_background');
+	$wp_customize->add_setting('header_background',  array('default' =>  'images/header.jpg', 'transport'=> 'postMessage'));
 
 	$wp_customize->add_control( new WP_Customize_Control ($wp_customize, 'background_color' , array(
 		'label' =>  __( 'Background Color', 'WebEng' ) ,

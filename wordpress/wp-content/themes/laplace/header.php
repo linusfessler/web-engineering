@@ -19,7 +19,7 @@
     background-color: #<?php echo get_theme_mod('background_color'); ?>;
 }
 .title-wrapper{
-background: url("images/<?php echo get_theme_mod('header_picture'); ?>") no-repeat center; 
+background: url("<?php echo get_theme_mod('header_background'); ?>") no-repeat center;
 }
 </style>
 <body>
@@ -46,7 +46,7 @@ background: url("images/<?php echo get_theme_mod('header_picture'); ?>") no-repe
 
 	<?php if (get_theme_mod('header_picture')) : ?>
 	
-    <div class="title-wrapper" style="background: url('<?php echo get_theme_mod('header_background'); ?>') no-repeat center")>
+    <div class="title-wrapper">
 
 	<?php else : ?>
 	

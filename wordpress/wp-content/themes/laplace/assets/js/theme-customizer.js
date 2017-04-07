@@ -14,16 +14,21 @@
         });
     });
 
-    wp.customize('website_title', function (value) {
+    wp.customize('header_background', function (value) {
         value.bind(function (newval) {
             console.log(newval)
+            $('.title-wrapper').css('background-image', 'url(' + newval + ')');
+        });
+    });
+
+    wp.customize('website_title', function (value) {
+        value.bind(function (newval) {
             $('#title').html(newval);
         });
     });
 
     wp.customize('monday_hours', function (value) {
         value.bind(function (newval) {
-            console.log("monday hours: "+ newval);
             $('#monday_hours_span').html(newval);
         });
     });
