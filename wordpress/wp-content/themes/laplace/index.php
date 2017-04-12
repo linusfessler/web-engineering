@@ -50,11 +50,11 @@
 						</a>
 						<div>
 							<div>
-								<a href="#menu-item<?php $counter ?>"><?php echo $title; ?></a>
+								<a href="#menu-item<?php echo $counter ?>"><?php echo $title; ?></a>
 							</div>
 						</div>
 					</div>
-					<div id="menu-item<?php $counter ?>" class="modalDialog">
+					<div id="menu-item<?php echo $counter ?>" class="modalDialog">
 						<div>
 							<a href="#close" title="Close" class="close">X</a>
 							<h2><?php echo $title; ?></h2>
