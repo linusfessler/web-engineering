@@ -28,7 +28,7 @@ var currentCategory;
 $(document).ready(function () {
 	hide(am + "-list"); hide(fpm + "-list"); hide(mfm + "-list"); hide(dm + "-list");
 	setChosenMenu(am);
-	/*hideElement(mE);
+	hideElement(mE);
 	hideElement(otbiE);
 	hideElement(hqcE);
 	hideElement(oeE);
@@ -36,8 +36,8 @@ $(document).ready(function () {
 	hideElement(peE);
 	hideElement(cfE);
 	hideElement(batE);
-	hideElement(ohE);*/
-
+	hideElement(ohE);
+    
 	$(am).hover(function () {
 		setChosenMenu(am);
 	})
@@ -52,7 +52,7 @@ $(document).ready(function () {
 	})
 });
 
-/*$(window).scroll (function () {
+$(window).scroll (function () {
 	var animateMe = runAnimation(mE);
 	var animateHqce = runAnimation(hqcE);
 	var animateOtbie = runAnimation(otbiE);
@@ -62,10 +62,10 @@ $(document).ready(function () {
 	var animateBate = runAnimation(batE);
 	var animateOhe = runAnimation(ohE);
 	var animateContacts = runAnimation(cfE);
-	var animateApetizers = animateMenuOptions(am);
+	/*var animateApetizers = animateMenuOptions(am);
 	var animateFreshPasta = animateMenuOptions(fpm);
 	var animateMeatFish = animateMenuOptions(mfm);
-	var animateDessert = animateMenuOptions(dm);
+	var animateDessert = animateMenuOptions(dm);*/
 	
 	 // Our menus
 	if (animateMe == true) {
@@ -103,7 +103,7 @@ $(document).ready(function () {
 	if (animateOhe == true) {
 		animateElement(ohE, firstOhe)
 	}
-	if (animateApetizers == true) {
+	/*if (animateApetizers == true) {
 		setChosenMenu(am);
 	}
 	if (animateFreshPasta == true) {
@@ -114,8 +114,8 @@ $(document).ready(function () {
 	}
 	if (animateDessert == true) {
 		setChosenMenu(dm);
-	}
-});*/
+	}*/
+});
 
 function runAnimation(section, e) {
 	var y = $(document).scrollTop();

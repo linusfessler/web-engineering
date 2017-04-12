@@ -32,6 +32,8 @@
 
 			<?php
 			
+            $counter = 0;
+            
 			$dishPosts = new WP_Query('post_type=dish&posts_per_page=100');
 			if ($dishPosts->have_posts()) :
 				while ($dishPosts->have_posts()) :
@@ -48,11 +50,11 @@
 						</a>
 						<div>
 							<div>
-								<a><?php echo $title; ?></a>
+								<a href="#menu-item<?php $counter ?>"><?php echo $title; ?></a>
 							</div>
 						</div>
 					</div>
-					<div class="modalDialog">
+					<div id="menu-item<?php $counter ?>" class="modalDialog">
 						<div>
 							<a href="#close" title="Close" class="close">X</a>
 							<h2><?php echo $title; ?></h2>
@@ -77,7 +79,9 @@
 							$dessert .= $html;
 							break;
 					}
-				
+				    
+                    $counter++;
+                    
 				endwhile;
 			endif;?>
 			
